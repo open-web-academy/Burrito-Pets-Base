@@ -2,6 +2,7 @@
 import { useAccount } from 'wagmi';
 import Footer from '@/components/layout/footer/Footer';
 import Header from '@/components/layout/header/Header';
+import React from "react";
 
 /**
  * Use the page component to wrap the components
@@ -14,22 +15,11 @@ export default function HomePage() {
     <>
       <Header />
       <main className="container mx-auto flex flex-col px-8 py-16">
-        <div>
-          <h2 className="text-xl">Developer information</h2>
+        <div style={{ textAlign: "center" }}>
+          <img src="https://raw.githubusercontent.com/yaairnaavaa/Burrito-Virtual-Pet/main/banner.webp" /><br />
+          <h1 style={{ fontSize: "40px", marginTop:"50px" }}>🌯Meet your ultimate virtual companion in Burrito Pets!</h1>
           <br />
-          <h3 className="text-lg">Account</h3>
-          <ul>
-            <li>
-              <b>status</b>: {account.status}
-            </li>
-            <li>
-              <b>addresses</b>: {JSON.stringify(account.addresses)}
-            </li>
-            <li>
-              <b>chainId</b>: {account.chainId}
-            </li>
-          </ul>
-        </div>
+        </div>        
       </main>
       <Footer />
     </>

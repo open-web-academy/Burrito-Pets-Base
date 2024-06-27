@@ -28,10 +28,9 @@ initAnalytics();
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.className}`}>
-      <body className="flex flex-1 flex-col">
+      <body className="flex flex-1 flex-col" style={{backgroundImage: 'url("https://raw.githubusercontent.com/yaairnaavaa/Burrito-Virtual-Pet/main/background.webp")', backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
         <OnchainProviders>{children}</OnchainProviders>
       </body>
-      <GoogleAnalytics />
     </html>
   );
 }

@@ -41,7 +41,13 @@ const codeStep6 = `\`\`\`solidity
 _mint(msg.sender, _amount);
 `;
 
-export default function Guide() {
+type GuideProps = {
+  saludo: string;
+};
+
+export default function Guide({saludo}:GuideProps) {
+
+  console.log(saludo);
   useGuideScroll();
 
   const contents = useMemo(

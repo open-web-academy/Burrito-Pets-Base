@@ -1,7 +1,7 @@
 import { generateMetadata } from '@/utils/generateMetadata';
 
 export const metadata = generateMetadata({
-  title: 'Mint - BOAT',
+  title: 'Mint - Pet',
   description:
     'Save weeks of initial app setup and the hassle of integrating onchain components with web2 infrastructure.',
   images: 'themes.png',
