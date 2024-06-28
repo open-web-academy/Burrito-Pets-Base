@@ -1,4 +1,5 @@
 import './global.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
 import OnchainProviders from '@/OnchainProviders';
