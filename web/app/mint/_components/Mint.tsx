@@ -8,7 +8,7 @@ export default function Mint() {
     const [mintedBurritos, setMintedBurritos] = useState(0);
     const [burritoName, setBurritoName] = useState("");
     const [minting, setMinting] = useState(false);
-    const [sender, setSender] = useState(true);
+    const [sender, setSender] = useState("0x34149390029Bbf4f4D9E7AdEa715D7055e145C05");
 
 
     const contents = useMemo(
@@ -84,7 +84,7 @@ export default function Mint() {
                                             <br /> <br />
                                             <div>
                                                 <a
-                                                    href="#/burrito-pets.near/widget/Burrito-Pets-Interact"
+                                                    href="interact"
                                                     style={{ color: "black" }}
                                                 >
                                                     Go to Play
@@ -95,13 +95,13 @@ export default function Mint() {
                                                 <label style={{ color: "black", "fontWeight": "500" }}>
                                                     {" "}
                                                     Burrito’s contract to add your NFTs to wallet
-                                                    0xc533FCB43DEf76ac1A175Ee6beB0Ad7d39469220
+                                                    0xAc9221060455f60dfFF8bf8C4f601E500AC095D7
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                 ) : (
-                                    <div>
+                                    <div style={{display:"grid", justifyContent:"center"}}>
                                         <img
                                             src="https://raw.githubusercontent.com/yaairnaavaa/Burrito-Virtual-Pet/d2c54b3423f07d0e9e22bf8aa105b12cf7973922/loading.gif"
                                             style={{
