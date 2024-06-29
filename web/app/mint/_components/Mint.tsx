@@ -649,11 +649,11 @@ export default function Mint() {
         console.log(transaction)
       }
       
-      if(isSuccess){
-        setTimeout(() => {
-          window.location.reload();
-      }, 5000);
-      }
+      // if(isSuccess){
+      //   setTimeout(() => {
+      //     window.location.reload();
+      // }, 5000);
+      // }
 
     const mint = () => {
         console.log("Mint");
