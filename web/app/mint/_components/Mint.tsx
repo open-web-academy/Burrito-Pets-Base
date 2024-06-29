@@ -681,7 +681,7 @@ export default function Mint() {
                     </ItemTitle>
                 </ItemHeader>
                 <ItemBody>
-                    {sender ? (
+                    {account.address ? (
                         <div className="container text-center">
                             <div>
                                 <ItemMintNumber>
@@ -749,7 +749,7 @@ export default function Mint() {
                         </div>
                     ) : (
                         <div style={{ "textAlign": "center" }}>
-                            <button>Connect with Web3</button>
+                            <ItemMintNumber>Connect your wallet</ItemMintNumber>
                         </div>
                     )}
                 </ItemBody>

@@ -631,7 +631,7 @@ export default function Interact() {
     const [currentActivity, setCurrentActivity] = useState<any>(null);
     const [currentImg, setCurrentImg] = useState<any>(null);
     const { writeContractAsync, isSuccess, isPending } = useWriteContract()
-    
+    const account = useAccount();
     
 
     const contents = useMemo(
@@ -931,7 +931,7 @@ export default function Interact() {
                                 {pet && pet.name}
                             </div>
                             <div className="col-4" style={{ "textAlign": "right" }}>
-                                {sender ? (
+                                {account.address ? (
                                     pet && (
                                         <ItemMintButton
                                             onClick={async () => {
@@ -945,7 +945,7 @@ export default function Interact() {
                             </div>
                         </ItemTitle>
                     </ItemHeader>
-                    {sender ? (
+                    {account.address ? (
                         !pet ? (
                             <ItemBodySelect>
                                 <div className="m-5">
@@ -1208,7 +1208,7 @@ export default function Interact() {
                         <ItemBodySelect>
                             <br />
                             <div style={{ "textAlign": "center" }}>
-                                <button>Connect with Web3</button>
+                              <ItemTitle>Connect Your Wallet</ItemTitle>
                             </div>
                         </ItemBodySelect>
                     )}
