@@ -1,5 +1,4 @@
 import { useMemo } from 'react';
-import {useWriteContracts,useCallsStatus} from 'wagmi/experimental'
 import { useAccount, useReadContract, useWriteContract } from 'wagmi';
 import { ItemBackground, ItemContainer, ItemHeader, ItemTitle, ItemImage, ItemBody, ItemMintNumber, ItemMintButton } from "../MintPageStyle";
 import React, { useCallback, useEffect, useState } from "react";
@@ -651,7 +650,9 @@ export default function Mint() {
       }
       
       if(isSuccess){
-        window.location.reload()
+        setTimeout(() => {
+          window.location.reload();
+      }, 5000);
       }
 
     const mint = () => {
@@ -679,7 +680,6 @@ export default function Mint() {
                         </label>
                     </ItemTitle>
                 </ItemHeader>
-                {isPending?<ItemBody> <p>Adopting your Burrito</p> </ItemBody>: 
                 <ItemBody>
                     {sender ? (
                         <div className="container text-center">
@@ -689,7 +689,7 @@ export default function Mint() {
                                 </ItemMintNumber>
                             </div>
                             <br />
-                            {!minting ? (
+                            {!isPending ? (
                                 <div>
                                     <div>
                                         <input
@@ -752,7 +752,7 @@ export default function Mint() {
                             <button>Connect with Web3</button>
                         </div>
                     )}
-                </ItemBody>}
+                </ItemBody>
             </ItemContainer>
         </ItemBackground>
             
